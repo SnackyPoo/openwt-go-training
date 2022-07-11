@@ -4,7 +4,7 @@ asynchronously. This is a modified Temporal Go sample.
 
 To find out more about Temporal, go here: https://temporal.io/
 
-# Sample Description
+## Description
 * Create a new expense report. Expense report has just the ID and Status, without amount or date to make things simpler.
 * Wait for the expense report to be approved. This could take an arbitrary amount of time. So the activity's `Execute` 
 method has to return before it is actually approved. This is done by returning a special error so the framework knows 
@@ -17,7 +17,7 @@ to the expense system or you will need to have your own polling agent to check f
 
 This sample relies on a dummy expense server w/ REST API to work.
 
-# Setup the services
+## Setup the services
 You need a Temporal service running. Clone the repository first.
 ```
 git clone git@github.com:temporalio/docker-compose.git
@@ -41,7 +41,7 @@ Start the activity worker.
 ```
 go run ./internal/temporal/worker
 ```
-# Use the REST API to execute the workflow
+## Use the REST API to execute the workflow
 Import collection into Postman from:
 ```
 /openwt-gw-training/postman/OpenWT Go Training.postman_collection.json
