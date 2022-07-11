@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "3e91603e-30d4-4ca4-a422-884a666d88b9",
+		"name": "OpenWT Go Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21292966"
+	},
+	"item": [
+		{
+			"name": "Get Expense by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/expenses/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"expenses",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1c3bcbfe-0891-4d96-93e1-12d63f3b457a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Expense by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/expenses/:id/approve",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"expenses",
+						":id",
+						"approve"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1c3bcbfe-0891-4d96-93e1-12d63f3b457a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Expense by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/expenses/:id/reject",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"expenses",
+						":id",
+						"reject"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "9b05bbbd-514c-4094-898a-48786a87fbcb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/expenses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Expense",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"id\": \"123dd\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/workflow/starter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"workflow",
+						"starter"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
